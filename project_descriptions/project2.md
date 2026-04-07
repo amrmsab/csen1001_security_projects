@@ -48,6 +48,10 @@ Remember: copying or sharing code doesn’t just risk penalties—it **steals yo
 
 # Project 2: SBOM Generator
 
+## TAs: Salma Salem and Omar Usama
+
+---
+
 ## Overview
 Students will build a **Software Bill of Materials (SBOM) generator** that scans project directories, identifies dependencies across multiple ecosystems, resolves transitive dependency trees, and produces SBOM documents in **[SPDX](https://spdx.dev/)** or **[CycloneDX](https://cyclonedx.org/)** formats or both.  
 
