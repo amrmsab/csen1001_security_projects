@@ -57,7 +57,7 @@ Students will build a **Software Bill of Materials (SBOM) generator** that scans
 
 The tool will also cross-reference discovered packages against CVE databases (NVD or OSV) to generate vulnerability reports alongside the SBOM.  
 
-This project is directly relevant to **[US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)** on improving national cybersecurity, which mandates SBOM production for all software sold to the federal government. Mastering SBOM generation is therefore a **marketable real-world skill**.
+This project is directly relevant to **[US Executive Order 14028](https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity)** on improving national cybersecurity, which mandates SBOM production for all software sold to the federal government. Mastering SBOM generation is therefore a **marketable real-world skill**.
 
 ---
 
@@ -87,7 +87,7 @@ SBOMs are critical for **security, compliance, and transparency** in the softwar
 ### Why SBOM Creation is Important
 - **Transparency**: Know exactly what’s inside your software.  
 - **Security**: Detect vulnerable components quickly.  
-- **Compliance**: Meet regulatory requirements (e.g., [US Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)).  
+- **Compliance**: Meet regulatory requirements.  
 - **Risk Management**: Identify outdated or risky dependencies.  
 - **Trust**: Builds confidence with customers and regulators.  
 
