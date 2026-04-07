@@ -215,7 +215,21 @@ Your project must include:
 
 ## Rubric
 
-# 📊 Rubric: DDoS Mitigation Tool Project
+The rubric below outlines the **high-level expectations** for the project.  
+A more detailed rubric — including **individual and team grading criteria** — will be shared with you soon.
+
+Note that the required functionality has been split into **four subprojects**, each for you to assign to a different team member.  
+- **Individual grading** will be based on each member’s contribution to their subproject.  
+- **Collective team grading** will reflect the team’s ability to integrate all parts into a cohesive final product.
+- Effective teamwork is essential to complete the project successfully. You must manage your time as a team by:  
+  - Defining clear **task breakdowns**.  
+  - Setting **timely milestones**.  
+  - Performing **risk assessments** to anticipate and mitigate delays.  
+- Use your **GitHub Classroom repository** for:  
+  - Proper versioning of code and Docker files.  
+  - Collaboration through branches and pull requests.  
+  - Forking and reviewing project updates.  
+  - Maintaining a transparent history of contributions.  
 
 ## Levels
 - **Level 3 (Excellent)** → Comprehensive, accurate, and professional execution  
@@ -235,9 +249,3 @@ Your project must include:
 | Anomaly Detection Performance | Accurate detection; composite scores meaningful; false positives minimized              | Detection works but simplistic; thresholds hard-coded; moderate errors        | Detection unreliable/missing; anomalies not flagged                   | Detection & Algorithms             |
 | Mitigation Strategy         | Automated rate limiting + firewall rules; safeguards included; clear recommendations    | Basic mitigation (rate limiting or firewall); limited safeguards              | Mitigation missing/ineffective; no safeguards                         | Mitigation & Firewall              |
 | Alerting & Notifications    | Alerts; detailed anomaly info + mitigation actions                | Alerts functional but missing details                      | Alerts missing or non-functional                                     | Dashboard & Alerts                |
-
----
-
-## ✅ Scoring
-- Each criterion scored **1–3 points**.  
-- **Total possible score: 21 points**.  
