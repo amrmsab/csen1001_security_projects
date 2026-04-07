@@ -162,7 +162,15 @@ These datasets provide labeled attack vs. normal traffic, with which you can tes
 
 ### Submission Guidelines
 - Your team must submit the **project code files** along with the **Docker files** to your GitHub Classroom team repository.  
-- Use the dataset to design your project, ensuring that part of the dataset is reserved for **testing and/or demonstration purposes**.  
+- Use the dataset to design your project, ensuring that part of the dataset is reserved for **testing and/or demonstration purposes**.
+> **Note on datasets during the grading session:**
+> The tool must accept a new `.pcap` dataset at runtime (via CLI flag or dashboard upload), recompute the baseline from it, and persist the resulting model. Baseline computation must complete within 10 minutes.
+>
+> During the evaluation session, the TA may or may not provide datasets. Teams should be prepared for both cases:
+> - If datasets are provided, one will be used to rebuild the baseline live and another for testing detection.
+> - If no datasets are provided, teams must arrive with a pre-computed baseline already loaded and a reserved test dataset ready to demonstrate detection and mitigation on the spot.
+>
+> **Teams must be prepared for both cases.**
 
 ---
 
