@@ -24,7 +24,7 @@
 - **TA Evaluation:**  
   - TAs will review your GitHub repository during the session.  
   - You will be asked to run your program, provide input scenarios, and test edge cases.  
-  - TAs will ask questions to assess your team’s understanding of the project.  
+  - TAs will ask questions to assess your team's understanding of the project.  
 
 ---
 
@@ -42,7 +42,7 @@ However, you must follow these guidelines:
 - **Take ownership of learning**: Use LLMs as a tool to support your work, not as a substitute for your own understanding.  
 - **Do not share your work with peers**: Sharing code between teams undermines the learning process. Each team must complete the project independently. Also, TAs have full access to your GitHub repositories and will be able to detect cases of plagiarism.  
 
-Remember: copying or sharing code doesn’t just risk penalties—it **steals your peers’ opportunity to learn** and weakens your own mastery of the material. **I trust you** to reasonably use LLMs and submit your own work. 
+Remember: copying or sharing code doesn't just risk penalties—it **steals your peers' opportunity to learn** and weakens your own mastery of the material. **I trust you** to reasonably use LLMs and submit your own work. 
 
 --- 
 
@@ -86,6 +86,20 @@ This project teaches **network security**, **anomaly detection**, and demonstrat
 
 ---
 
+## Your Tool Must Work on PCAP Files with Two Modes
+
+Your DDoS mitigation tool must accept **pcap files** as input — not CSV files. The tool must support **two distinct modes of operation**:
+
+1. **Learning Mode:** The tool reads a pcap file containing normal traffic, extracts features (packet rate, byte rate, protocol distribution, source IP entropy, etc.) per time window, builds a baseline profile, and **saves it** to disk so it can be reused later without relearning.
+
+2. **Detection Mode:** The tool loads a previously saved baseline, reads a pcap file containing traffic to be analyzed (or captures from a live network interface), extracts the same features using the same pipeline, compares them against the baseline, and triggers detection + mitigation when anomalies are found.
+
+The feature extraction step — going from raw packets to meaningful metrics — is a core part of this project.
+
+**During grading, we will ask you to demonstrate both modes.** You must come to the evaluation with a **pre-learned baseline** from normal traffic and a **corresponding attack pcap** ready to test on. We may or may not provide additional pcap files for testing.
+
+---
+
 ## Step-by-Step Instructions
 
 ### 1. Learn about DDoS attacks
@@ -104,6 +118,8 @@ Spend some time learning about DDoS attack types and how to detect them. For exa
 - Compute traffic statistics per time window, e.g., packet counts per protocol, source/destination IP distributions, port usage, bandwidth trends.  
 - Store baseline metrics to capture normal traffic patterns.  
 - Build statistical models (e.g., mean, std. deviation, percentiles, or machine learning, etc.) for anomaly detection.
+
+Another engineering decision you will need to make is whether your baseline is **global** (one profile for all traffic regardless of when it was captured) or **attached to a specific time period** (e.g., per hour, per day, per day-of-week and hour). This is a design choice with real tradeoffs — be prepared to explain and justify your approach during grading. Note that implementing time-specific baselines correctly will earn a higher grade than a global-only approach.
 
 ---
 
@@ -154,7 +170,9 @@ You can start with one of the following publicly available datasets, e.g.:
 ](https://www.unb.ca/cic/datasets/ddos-2019.html)
 - [CAIDA DDoS Attack Dataset (Center for Applied Internet Data Analysis)](https://www.caida.org/catalog/datasets/ddos-20070804_dataset/)
 
-These datasets provide labeled attack vs. normal traffic, with which you can test your anomaly detection algorithms. 
+These datasets provide labeled attack vs. normal traffic, with which you can test your anomaly detection algorithms.
+
+We are aware that the CIC-DDoS2019 dataset is very large and the original UNB servers can be unreliable. You are not restricted to the suggested datasets — you can use **any publicly available DDoS pcap dataset** to build and test your tool, or **generate your own traffic** using tools like `hping3`, `Scapy` scripts, or any other tool.
 
 ---
 
@@ -227,8 +245,8 @@ The rubric below outlines the **high-level expectations** for the project.
 A more detailed rubric — including **individual and team grading criteria** — will be shared with you soon.
 
 Note that the required functionality has been split into **four subprojects**, each for you to assign to a different team member.  
-- **Individual grading** will be based on each member’s contribution to their subproject.  
-- **Collective team grading** will reflect the team’s ability to integrate all parts into a cohesive final product.
+- **Individual grading** will be based on each member's contribution to their subproject.  
+- **Collective team grading** will reflect the team's ability to integrate all parts into a cohesive final product.
 - Effective teamwork is essential to complete the project successfully. You must manage your time as a team by:  
   - Defining clear **task breakdowns**.  
   - Setting **timely milestones**.  
