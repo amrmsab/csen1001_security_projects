@@ -119,8 +119,6 @@ Spend some time learning about DDoS attack types and how to detect them. For exa
 - Store baseline metrics to capture normal traffic patterns.  
 - Build statistical models (e.g., mean, std. deviation, percentiles, or machine learning, etc.) for anomaly detection.
 
-Another engineering decision you will need to make is whether your baseline is **global** (one profile for all traffic regardless of when it was captured) or **attached to a specific time period** (e.g., per hour, per day, per day-of-week and hour). This is a design choice with real tradeoffs — be prepared to explain and justify your approach during grading. Note that implementing time-specific baselines correctly will earn a higher grade than a global-only approach.
-
 ---
 
 ### 3. Implement Anomaly Detection
